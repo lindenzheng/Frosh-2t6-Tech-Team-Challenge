@@ -2,6 +2,7 @@
 import weekdays from './schedule_data.json';
 import Header from './components/Header';
 import Week from './components/WeekViewer';
+import Logo from './components/Logo';
 import Toggle from './components/Toggle';
 
 // TODO: Build your Frosh Week Schedule page here
@@ -14,6 +15,7 @@ export default function App() {
     <div className="page">
       <Header />
       <Week />
+      <Logo />
       <Toggle />
     </div>
   );

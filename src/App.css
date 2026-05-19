@@ -35,19 +35,19 @@ body {
 .page {
   width: 100vw;
   height: 100vh;
-  background: var(--yellow);
+  background: var(--background);
   display: flex;
   position: relative;
   overflow: hidden;
-  color: var(--purple);
+  color: var(--primary);
 }
 
 /* SIDEBAR */
 
 .sidebar {
   width: 190px;
-  height: 80%;
-  border-right: 1px solid var(--dark-purple);
+  height: 78%;
+  border-right: 1px solid var(--secondary);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -70,6 +70,7 @@ body {
   font-weight: 400;
   letter-spacing: -1px;
   align-self: flex-end;
+  margin-right: -24px;
 }
 
 .vertical-group {
@@ -81,7 +82,7 @@ body {
 .month {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 110px;
+  font-size: 132px;
   line-height: 0.85;
   font-weight: 600;
   margin-right: -6px;
@@ -90,26 +91,36 @@ body {
 .dates {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 36px;
+  font-size: 43px;
   font-weight: 600;
-  color: var(--dark-purple)
+  color: var(--secondary)
 }
 
 /* LOGO */
 
-.logo-section {
+/* .logo-section {
   position: relative;
   padding: 20px 0 28px 15px;
+} */
+
+.logo-section {
+  position: absolute;
+  bottom: 24px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
 }
 
 .circle {
+  position: absolute;
   width: 120px;
   height: 120px;
-  background: var(--gray);
+  background: var(--accent);
   border-radius: 50%;
   position: absolute;
-  left: 34px;
-  top: -12px;
+  left: 42px;
+  top: -72px;
   z-index: 1;
 }
 
@@ -118,14 +129,7 @@ body {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 0.88;
-  letter-spacing: -3px;
-}
-
-.logo-text span:first-child {
-  margin-bottom: -6px;
+  width: 87%;
 }
 
 /* CALENDAR */
@@ -138,7 +142,7 @@ body {
 }
 
 .day-column {
-  border-right: 1px solid var(--dark-purple);
+  border-right: 1px solid var(--secondary);
   position: relative;
 }
 
@@ -163,7 +167,7 @@ body {
   right: 16px;
   width: 56px;
   height: 24px;
-  background: var(--dark-purple);
+  background: var(--secondary);
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -174,5 +178,5 @@ body {
   width: 30px;
   height: 18px;
   border-radius: 999px;
-  background: var(--yellow);
+  background: var(--background);
 }
