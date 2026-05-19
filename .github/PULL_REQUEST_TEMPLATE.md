@@ -1,10 +1,10 @@
 ## About You
 
-**Your Name:**
+**Your Name:** Linden Zheng
 
-**Program & Year:**
+**Program & Year:** Mech 2T9
 
-**Time Spent:**
+**Time Spent:** May 17-?
 
 ---
 

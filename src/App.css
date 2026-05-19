@@ -1,6 +1,178 @@
 /* TODO: Add your styles here */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: #6E1E8C;
+  --dark-purple: #3C145A;
+  --yellow: #FAC800;
+  --green: #219A40;
+  --gray: #F0F0F0;
+
+  /* day styles */
+  --primary: var(--purple);
+  --background: var(--yellow);
+  --secondary: var(--dark-purple);
+  --accent: var(--gray);
+}
+
+:root.nite {
+  --primary: var(--yellow);
+  --background: var(--dark-purple);
+  --secondary: var(--gray);
+  --accent: var(--gray);
+}
 
 body {
-  margin: 0;
-  font-family: sans-serif;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background: var(--yellow);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  color: var(--purple);
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 190px;
+  height: 80%;
+  border-right: 1px solid var(--dark-purple);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding-top: 15px;
+  padding-left: 10px;
+  height: 100%;
+}
+
+.year {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  align-self: flex-end;
+}
+
+.vertical-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.month {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 110px;
+  line-height: 0.85;
+  font-weight: 600;
+  margin-right: -6px;
+}
+
+.dates {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--dark-purple)
+}
+
+/* LOGO */
+
+.logo-section {
+  position: relative;
+  padding: 20px 0 28px 15px;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  background: var(--gray);
+  border-radius: 50%;
+  position: absolute;
+  left: 34px;
+  top: -12px;
+  z-index: 1;
+}
+
+.logo-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 0.88;
+  letter-spacing: -3px;
+}
+
+.logo-text span:first-child {
+  margin-bottom: -6px;
+}
+
+/* CALENDAR */
+
+.calendar {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 90%;
+}
+
+.day-column {
+  border-right: 1px solid var(--dark-purple);
+  position: relative;
+}
+
+.day-column:last-child {
+  border-right: none;
+}
+
+.day-title {
+  padding-top: 14px;
+  padding-left: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: lowercase;
+  color: var(--dark-purple);
+}
+
+/* TOGGLE */
+
+.toggle {
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  width: 56px;
+  height: 24px;
+  background: var(--dark-purple);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+
+.toggle-knob {
+  width: 30px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--yellow);
 }
