@@ -1,16 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
-const Week = () => {
+export default function Timetable() {
     const days = ["monday", "tuesday", "wednesday", "thursday", "friday"];
     return (
-        <div className="calendar">
+        <div className="timetable">
             {days.map((day, index) => (
-                <div className="day-column" key={index}>
-                    <div className="day-title">{day}</div>
+                <div className="column" key={index}>
+                    <div className="column-header">{day}</div>
                 </div>
             ))}
         </div>
     )
 }
-
-export default Week

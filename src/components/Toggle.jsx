@@ -1,11 +1,14 @@
-import React from 'react'
-
-const Toggle = () => {
+export default function Toggle({ nite, setNite }) {
     return (
-        <div className="toggle">
-            <div className="toggle-knob"></div>
-        </div>
-    )
-}
+        <button
+            className={`toggle ${nite ? "active" : ""}`}
+            onClick={() => setNite(!nite)}
+        >
+            <div className="toggle-knob" />
 
-export default Toggle
+            <span className="toggle-label">
+                {nite ? "nite" : "day"}
+            </span>
+        </button>
+    );
+}
