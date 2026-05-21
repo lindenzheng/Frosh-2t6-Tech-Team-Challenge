@@ -8,6 +8,7 @@ export function normalizeEvents(schedule) {
             normalized.push({
                 day: day.split(" ")[0],
                 title: event["Event Name"].toUpperCase(),
+                location: event["Event Location"],
                 description: event["Event Description"],
                 start: parseTime(event["Start Time"]),
                 end: parseTime(event["End Time"]),

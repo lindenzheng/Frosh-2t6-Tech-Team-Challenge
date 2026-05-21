@@ -27,6 +27,7 @@ function EventDetails({ event }) {
         <div className="details">
             <h1>{event.title}</h1>
             <h2>{format12Hour(event.start)}{" "}-{" "}{format12Hour(event.end)}</h2>
+            <h4>{event.location}</h4>
             <p dangerouslySetInnerHTML={{ __html: event.description }}></p>
         </div>
     )
