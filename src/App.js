@@ -1,5 +1,4 @@
 // Import the schedule data from the JSON file — you can use it like a regular JS array
-import days from './schedule_data.json';
 import Sidebar from './components/Sidebar';
 import Timetable from './components/Timetable';
 import Logo from './components/Logo';
@@ -11,6 +10,8 @@ import "./App.css";
 
 export default function App() {
   const [nite, setNite] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [event, setEvent] = useState(null);
 
   useEffect(() => {
     if (nite) {
@@ -19,14 +20,13 @@ export default function App() {
       document.documentElement.classList.remove("nite");
     }
   }, [nite]);
+
   return (
     <div className="page">
-      <Sidebar />
-      <Timetable />
+      <Sidebar event={event} isOpen={isOpen} />
+      <Timetable setEvent={setEvent} setIsOpen={setIsOpen} nite={nite} />
       <Logo nite={nite} />
-      <Toggle
-        nite={nite}
-        setNite={setNite}
+      <Toggle nite={nite} setNite={setNite}
       />
     </div>
   );

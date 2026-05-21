@@ -49,7 +49,7 @@ body {
 .sidebar {
   width: 190px;
   height: 78%;
-  border-right: 1px solid var(--secondary);
+  /* border-right: 1px solid var(--secondary); */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -96,6 +96,31 @@ body {
   font-size: 43px;
   font-weight: 600;
   color: var(--secondary)
+}
+
+.details {
+  display: inline;
+  align-content: center;
+  gap: 14px;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 100%;
+  width: 100%;
+  color: var(--secondary);
+}
+
+.details h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.details h2 {
+  font-size: 12px;
+}
+
+.details p {
+  font-size: 12px;
 }
 
 /* LOGO */
@@ -151,19 +176,39 @@ html {
   height: 100%;
   background-color: var(--background);
   border-radius: 50%;
-  animation: nite 3s infinite;
+  /* animation: nite 3s infinite; */
   transform: rotate(-30deg);
 }
 
-@keyframes nite {
+.circle-anim.nite {
+  animation: toNite 0.6s ease forwards;
+}
+
+.circle-anim.day {
+  animation: toDay 0.6s ease forwards;
+}
+
+@keyframes toNite {
   0% {
     border-left: 0 solid var(--gray);
-    /* border-right: 0 solid var(--gray); */
     background-color: var(--gray);
   }
 
   100% {
     border-left: 3rem solid var(--gray);
+    background-color: transparent;
+  }
+}
+
+@keyframes toDay {
+  0% {
+    border-left: 3rem solid var(--gray);
+    background-color: transparent;
+  }
+
+  100% {
+    border-left: 0 solid var(--gray);
+    background-color: var(--gray);
   }
 }
 
@@ -177,21 +222,45 @@ html {
 }
 
 .column {
-  border-right: 1px solid var(--secondary);
+  /* border-right: 1px solid var(--secondary); */
   position: relative;
 }
 
-.column:last-child {
+/* .column:last-child {
   border-right: none;
-}
+} */
 
 .column-header {
   padding-top: 14px;
+  padding-bottom: 9px;
   padding-left: 12px;
   font-size: 20px;
   font-weight: 500;
   text-transform: lowercase;
   color: var(--secondary);
+}
+
+.column-body {
+  position: relative;
+}
+
+.event {
+  position: absolute;
+  padding: 8px;
+  overflow-y: auto;
+  border-radius: 10px;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  transition: 0.2s;
+}
+
+.event h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.event p {
+  font-size: 12px;
 }
 
 /* TOGGLE */

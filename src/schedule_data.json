@@ -142,8 +142,8 @@
         {
             "Event Name": "FACULTY EVENTS",
             "Event Description": "Check out more information about Faculty Events here: <a href='https://undergrad.engineering.utoronto.ca/event/faculty-orientation-events/'>Faculty Events</a>",
-            "Start Time": " ",
-            "End Time": " ",
+            "Start Time": "9:30 AM",
+            "End Time": "2:30 PM",
             "Color": "gray"
         },
         {
@@ -165,8 +165,8 @@
         {
             "Event Name": "FACULTY EVENTS",
             "Event Description": "Check out more information about Faculty Events here: <a href='https://undergrad.engineering.utoronto.ca/event/faculty-orientation-events/'>Faculty Events</a>",
-            "Start Time": " ",
-            "End Time": " ",
+            "Start Time": "11:00 AM",
+            "End Time": "3:00 PM",
             "Color": "gray"
         },
         {
